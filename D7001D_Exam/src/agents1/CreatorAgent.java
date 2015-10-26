@@ -43,14 +43,14 @@ public class CreatorAgent extends Agent {
                     ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
                     msg.setContent("Hi");
                     msg.addReceiver(Bender);
-                    System.out.println("+++ Sending: " + n);
+                    System.out.println("+++ Sending: " + ++n);
                     //10- Send the Message
                     send(msg);
-                    //block(1000);
+                    block(1000);
                 }
                 
-                //public boolean done(){
-                //    return false;
+               // public boolean done(){
+                 //  return false;
                 //}
             });
         } catch (StaleProxyException ex) {
